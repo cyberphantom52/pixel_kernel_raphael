@@ -9,11 +9,11 @@ restore='\033[0m'
 clear
 
 # Resources
-export CLANG_PATH=/datadrive/sov/prebuilts/clang/host/linux-x86/clang-trb/bin
+export CLANG_PATH=$HOME/kernel/proton-clang/bin
 export PATH=${CLANG_PATH}:${PATH}
 export CROSS_COMPILE=${CLANG_PATH}/aarch64-linux-gnu-
 export CROSS_COMPILE_ARM32=${CLANG_PATH}/arm-linux-gnueabi-
-export THINLTO_CACHE=/datadrive/kernel/ltocache/
+export THINLTO_CACHE=$HOME/kernel/ltocache/
 DEFCONFIG="raphael_defconfig"
 
 # Kernel Details
@@ -64,7 +64,7 @@ echo -e "${restore}"
 
 
 # Vars
-BASE_AK_VER="SOVIET-STAR-K20P-"
+BASE_AK_VER="pixel-"
 DATE=`date +"%Y%m%d-%H%M"`
 AK_VER="$BASE_AK_VER$VER"
 ZIP_NAME="$AK_VER"-"$DATE"
@@ -72,8 +72,8 @@ ZIP_NAME="$AK_VER"-"$DATE"
 #export LOCALVERSION=~`echo $AK_VER`
 export ARCH=arm64
 export SUBARCH=arm64
-export KBUILD_BUILD_USER=NATO66613
-export KBUILD_BUILD_HOST=KREMLIN
+export KBUILD_BUILD_USER=CyberPhantom
+export KBUILD_BUILD_HOST=Evelyn
 
 echo
 
@@ -105,7 +105,7 @@ case "$dchoice" in
 	y|Y )
 		make_kernel
 		make_boot
-                make_zip
+		# make_zip
 		break
 		;;
 	n|N )
